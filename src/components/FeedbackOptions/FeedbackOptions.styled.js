@@ -1,15 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Title = styled.h1`
-  text-align: center;
-  margin: 15px 0;
-`;
-
-export const Wrap = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-`;
 export const Button = styled.button`
   padding: 10px;
   background-color: #c6c9a9;
