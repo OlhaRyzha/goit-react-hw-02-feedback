@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import { Button } from './FeedbackOptions.styled';
+import PropTypes from 'prop-types';
+
 export class Feedback extends Component {
   render() {
     const { good, neutral, bad } = this.props.options;
@@ -23,3 +25,11 @@ export class Feedback extends Component {
     );
   }
 }
+Feedback.propTypes = {
+  options: PropTypes.shape({
+    good: PropTypes.string,
+    neutral: PropTypes.string,
+    bad: PropTypes.string,
+  }),
+  onLeaveFeedback: PropTypes.func,
+};
