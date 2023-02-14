@@ -3,6 +3,10 @@ import { Title, Wrap } from './Section.styled';
 import PropTypes from 'prop-types';
 
 export class Section extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired,
+  };
   render() {
     return (
       <>
@@ -12,8 +16,3 @@ export class Section extends Component {
     );
   }
 }
-
-Section.protoType = {
-  title: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-};

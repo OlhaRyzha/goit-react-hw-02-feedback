@@ -3,6 +3,13 @@ import { Card } from './Statistics.styled';
 import PropTypes from 'prop-types';
 
 export class Statistics extends Component {
+  static propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    totalFeedback: PropTypes.number.isRequired,
+    positivePercentage: PropTypes.string.isRequired,
+  };
   render() {
     const { good, neutral, bad, totalFeedback, positivePercentage } =
       this.props;
@@ -20,10 +27,3 @@ export class Statistics extends Component {
     );
   }
 }
-Statistics.propTypes = {
-  good: PropTypes.number.isRequired,
-  neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  totalFeedback: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.string.isRequired,
-};
